@@ -21,3 +21,6 @@ use App\Http\Controllers\Admin\AAAController;
 Route::controller(AAAController::class)->prefix('XXX')->group(function() {
     Route::get('XXX', 'bbb');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
