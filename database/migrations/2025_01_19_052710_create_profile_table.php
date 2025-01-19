@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('profile', function (Blueprint $table) {
             $table->id();
-            $table->string('名前'); // ニュースのタイトルを保存するカラム
-            $table->string('性別');  // ニュースの本文を保存するカラム
-            $table->string('趣味');
-            $table->string('自己紹介欄');
+            $table->string('name'); 
+            $table->string('gender');
+            $table->string('hobby'); 
+            $table->string('introduction');  
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('profile');
     }
 };
