@@ -26,10 +26,8 @@ class ProfileController extends Controller
         }
         unset($form['_token']);
         unset($form['image']);
-
         $profile->fill($form);
         $profile->save();
-
         return redirect('admin/profile/create');
     }
 
@@ -40,6 +38,18 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
+        $this->validate($request, News::$rules);
         return redirect('admin/profile/edit');
+        $news = News::find($request->id);
+        $news_form = $request->all();
+
+        if ($request->remove == 'true') {
+            $news_form['image_path'] = null;
+        } elseif ($request->file('image')) {
+            $path = $request->file('image')->store('public/image');
+            $news_form['image_path'] = basename($path);
+        } else {
+            $news_form['image_path'] = $news->image_path;
+        }
     }
 }
