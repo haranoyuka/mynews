@@ -26,8 +26,8 @@ class ProfileController extends Controller
         }
         unset($form['_token']);
         unset($form['image']);
-        $profile->fill($form);
-        $profile->save();
+        $news->fill($form);
+        $news->save();
         return redirect('admin/profile/create');
     }    
 }
