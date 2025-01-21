@@ -2,7 +2,7 @@
 @extends('layouts.profile')
 
 
-{{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
+{{-- admin.blade.phpの@yield('title')に'Myプロフィール'を埋め込む --}}
 @section('title', 'Myプロフィール')
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>Myプロフィール</h2>
-                <form action="{{ route('admin.profile.create') }}" method="post" enctype="multipart/form-data">
+                <update action="{{ route('admin.profile.create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
                         <ul>
