@@ -18,5 +18,4 @@ class News extends Model
     {
         return $this->hasMany('App\Models\History');
     }
-
 }

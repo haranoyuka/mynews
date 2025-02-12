@@ -35,9 +35,8 @@ class NewsController extends Controller
         return redirect('admin/news/create');
     }
 
-
-public function index(Request $request)
-{
+    public function index(Request $request)
+    {
         $cond_title = $request->cond_title;
         if ($cond_title !='') {
             $posts = News::where('title', $cond_title)->get();
@@ -45,10 +44,9 @@ public function index(Request $request)
             $posts = News::all();
         }
         return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
-    
-}
+    }
 
-public function edit(Request $request)
+    public function edit(Request $request)
     {
         // News Modelからデータを取得する
         $news = News::find($request->id);
@@ -66,7 +64,7 @@ public function edit(Request $request)
         $news = News::find($request->id);
         // 送信されてきたフォームデータを格納する
         $news_form = $request->all();
-
+        
         if ($request->remove == 'true') {
             $news_form['image_path'] = null;
         } elseif ($request->file('image')) {
@@ -82,12 +80,21 @@ public function edit(Request $request)
 
         // 該当するデータを上書きして保存する
         $news->fill($news_form)->save();
-        // 以下を追記
         $history = new History();
         $history->news_id = $news->id;
         $history->edited_at = Carbon::now();
         $history->save();
+        
         return redirect('admin/news/');
     }
+
+    public function delete(Request $request)
+    {
+        $news = News::find($request->id);
+        $news->delete();
+
+        return redirect('admin/news/');
+    }
+
 }
 
