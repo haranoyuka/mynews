@@ -44,4 +44,6 @@ Route::controller(ProfileController::class)->prefix('admin')->name('admin.')->mi
     Route::post('profile/create', 'create')->name('profile.create');
     Route::get('profile/edit', 'edit')->name('profile.edit');
     Route::post('profile/edit', 'update')->name('profile.update');
+    Route::get('profile', 'index')->name('profile.index');
 });
+
