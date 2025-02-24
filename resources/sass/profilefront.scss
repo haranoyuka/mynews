@@ -1,61 +1,74 @@
 body {
-    color: #000;
+  color: #000;
+}
+
+.navbar-laravel {
+  background-color: #0a56fb;
+}
+
+.header {
+  .logo {
+    width: 120px;
+    height: 82px;
   }
-  
-  .navbar-laravel {
-    background-color: #0a56fb;
+}
+
+.name {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  h1 {
+    color: #fff;
+    font-size: 1.2em;
   }
+}
+.gender {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  h1 {
+    color: #fff;
+    font-size: 1.2em;
+  }
+}
+.hobby {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  h1 {
+    color: #fff;
+    font-size: 1.2em;
+  }
+}
+
+.introduction {
+  font-size: 0.8em;
+}
   
-  .header {
-    .logo {
-        width: 120px;
-        height: 82px;
+.posts {
+  .post {
+    .date {
+      font-size: 0.6em;
+      color: #999999;
     }
-  }
-  
-  .headline {
-    .caption {
-      position: relative;
-      width: 350px;
-      .image {
-        img {
-      width: 100%;
-        }
-      }
-      .name {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        h1 {
-      color: #fff;
+    .name {
       font-size: 1.2em;
-        }
-      }
-      .body {
-        font-size: 0.8em;
-      }
+      font-weight: bold;
+    }
+    .gender {
+      font-size: 0.8em;
+    }
+    .hobby {
+      font-size: 0.8em;
+    }
+    .introduction {
+      font-size: 0.8em;
     }
   }
-  
-  .posts {
-    .post {
-      .date {
-        font-size: 0.6em;
-        color: #999999;
-      }
-      .title {
-        font-size: 1.2em;
-        font-weight: bold;
-      }
-      .body {
-        font-size: 0.8em;
-      }
-      .image {
-        img {
-      width: 250px;
-        }
-      }
-    }
-  }
+}

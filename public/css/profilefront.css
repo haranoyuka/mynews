@@ -1,0 +1,70 @@
+body {
+  color: #000;
+}
+
+.navbar-laravel {
+  background-color: #0a56fb;
+}
+
+.header .logo {
+  width: 120px;
+  height: 82px;
+}
+
+.name {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.name h1 {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.gender {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.gender h1 {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.hobby {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.hobby h1 {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.introduction {
+  font-size: 0.8em;
+}
+
+.posts .post .date {
+  font-size: 0.6em;
+  color: #999999;
+}
+.posts .post .name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.posts .post .gender {
+  font-size: 0.8em;
+}
+.posts .post .hobby {
+  font-size: 0.8em;
+}
+.posts .post .introduction {
+  font-size: 0.8em;
+}
