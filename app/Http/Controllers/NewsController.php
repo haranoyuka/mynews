@@ -12,10 +12,12 @@ class NewsController extends Controller
 
         if (count($posts) > 0) {
             $headline = $posts->shift();
+            //$headlineにshiftの値をを渡している
+            //$postに5つ配列があるとしたら
         } else {
             $headline = null;
         }
-
+        //
         // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、という変数を渡している
         return view('news.index', ['headline' => $headline, 'posts' => $posts]);
